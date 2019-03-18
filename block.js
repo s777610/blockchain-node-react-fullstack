@@ -23,7 +23,7 @@ class Block {
 
     // keep doing Proof of Work
     do {
-      nonce++;
+      nonce++; // keep guessing nonce
       timestamp = Date.now();
       difficulty = Block.adjustDifficulty({
         originalBlock: lastBlock,
@@ -45,6 +45,7 @@ class Block {
     });
   }
 
+  // Adjusted the difficulty to ensure that blocks are mined at MINE_RATE
   static adjustDifficulty({ originalBlock, timestamp }) {
     const { difficulty } = originalBlock;
     if (difficulty < 1) return 1;

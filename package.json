@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +15,7 @@
     "jest": "^24.5.0"
   },
   "dependencies": {
+    "express": "^4.16.4",
     "hex-to-binary": "^1.0.1"
   }
 }

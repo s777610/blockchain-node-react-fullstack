@@ -8,7 +8,6 @@ const CHANNELS = {
 class PubSub {
   constructor({ blockchain }) {
     this.blockchain = blockchain;
-
     this.publisher = redis.createClient();
     this.subscriber = redis.createClient();
 
@@ -21,7 +20,6 @@ class PubSub {
 
   handleMessage(channel, message) {
     console.log(`Message received. Channel: ${channel}. Message: ${message}.`);
-
     const parseMessage = JSON.parse(message);
 
     if (channel === CHANNELS.BLOCKCHAIN) {

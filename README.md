@@ -7,4 +7,4 @@ blockchain application. The publisher and subscriber pattern allows multiple blo
 
 3. When one blockchain adds a new block, we want that blockchain to publish the new version of the chain to the entire network. By doing so, all subscribed blockchain instances of application will get that new block data. After that, they can check if the new chain is valid or not and update their own chain or not. It Synchronizes chains when new peers connected to the network as well. In addition, it Optimizes the implementation to avoid redundant interaction.
 
-4. Use elliptic and secp256k1 algorithm.
+4. Use elliptic to generate key pair. Use secp256k1 algorithm.

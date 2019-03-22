@@ -1,5 +1,6 @@
 const { STARTING_BALANCE } = require("../config");
 const { ec, cryptoHash } = require("../util");
+const Transaction = require("./transaction");
 
 // Private Key: can be used to sign a signature
 // Public Key: can be used to verify a signature
@@ -20,6 +21,18 @@ class Wallet {
   sign(data) {
     // use private key to generate signature for every transaction
     return this.keyPair.sign(cryptoHash(data)); // return a Signature
+  }
+
+  createTransaction({ amount, recipient }) {
+    if (amount > this.balance) {
+      throw new Error("Amount exceeds balance");
+    }
+
+    return new Transaction({
+      senderWallet: this,
+      recipient,
+      amount
+    });
   }
 }
 

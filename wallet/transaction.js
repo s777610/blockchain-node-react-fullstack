@@ -51,6 +51,7 @@ class Transaction {
     }
 
     this.outputMap[senderWallet.publicKey] -= amount;
+    // createInput() will sign new signature
     this.input = this.createInput({ senderWallet, outputMap: this.outputMap });
   }
 

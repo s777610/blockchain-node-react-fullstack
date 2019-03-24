@@ -7,6 +7,10 @@ class TransactionPool {
     this.transactionMap[transaction.id] = transaction;
   }
 
+  setMap(transactionMap) {
+    this.transactionMap = transactionMap;
+  }
+
   // inputAddress is wallet.publicKey from sender
   existingTransaction({ inputAddress }) {
     // transactions is a list of transaction

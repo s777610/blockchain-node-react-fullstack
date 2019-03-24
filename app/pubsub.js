@@ -23,11 +23,18 @@ class PubSub {
 
   handleMessage(channel, message) {
     console.log(`Message received. Channel: ${channel}. Message: ${message}.`);
-    const parseMessage = JSON.parse(message);
+    const parsedMessage = JSON.parse(message);
 
-    if (channel === CHANNELS.BLOCKCHAIN) {
-      // replaceChain if it is valid and longer
-      this.blockchain.replaceChain(parseMessage);
+    switch (channel) {
+      case CHANNELS.BLOCKCHAIN:
+        // replaceChain if it is valid and longer
+        this.blockchain.replaceChain(parsedMessage);
+        break;
+      case CHANNELS.TRANSACTION:
+        this.transactionPool.setTransaction(parsedMessage);
+        break;
+      default:
+        return;
     }
   }
 
@@ -49,6 +56,13 @@ class PubSub {
     this.publish({
       channel: CHANNELS.BLOCKCHAIN,
       message: JSON.stringify(this.blockchain.chain) // message only can be string
+    });
+  }
+
+  broadcastTransaction(transaction) {
+    this.publish({
+      channel: CHANNELS.TRANSACTION,
+      message: JSON.stringify(transaction)
     });
   }
 }

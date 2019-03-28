@@ -28,7 +28,7 @@ class PubSub {
     switch (channel) {
       case CHANNELS.BLOCKCHAIN:
         // replaceChain if it is valid and longer
-        this.blockchain.replaceChain(parsedMessage, () => {
+        this.blockchain.replaceChain(parsedMessage, true, () => {
           this.transactionPool.clearBlockchainTransactions({
             chain: parsedMessage
           });

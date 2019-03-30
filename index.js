@@ -1,5 +1,6 @@
 const express = require("express");
 const request = require("request");
+const path = require("path");
 const bodyParser = require("body-parser");
 const Blockchain = require("./blockchain");
 const PubSub = require("./app/pubsub");
@@ -84,6 +85,10 @@ app.get("/api/wallet-info", (req, res) => {
       address
     })
   });
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/public/index.html"));
 });
 
 const syncWithRootState = () => {

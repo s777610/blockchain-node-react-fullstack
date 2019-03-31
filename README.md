@@ -12,3 +12,5 @@ blockchain application. The publisher and subscriber pattern allows multiple blo
 
 ## Front End
 1. Install parcel-bundler, and use it to bundler and transpiler JavaScript on Front End
+
+2. `npm run build-client` for building front end

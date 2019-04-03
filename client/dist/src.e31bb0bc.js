@@ -29834,7 +29834,7 @@ function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      fetch("http://localhost:3000/api/wallet-info").then(function (response) {
+      fetch("".concat(document.location.origin, "/api/wallet-info")).then(function (response) {
         return response.json();
       }).then(function (json) {
         return _this2.setState({
@@ -45074,7 +45074,7 @@ function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      fetch("http://localhost:3000/api/blocks").then(function (response) {
+      fetch("".concat(document.location.origin, "/api/blocks")).then(function (response) {
         return response.json();
       }).then(function (json) {
         return _this2.setState({
@@ -45175,7 +45175,7 @@ function (_Component) {
       var _this$state = _this.state,
           recipient = _this$state.recipient,
           amount = _this$state.amount;
-      fetch("http://localhost:3000/api/transact", {
+      fetch("".concat(document.location.origin, "/api/transact"), {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -45260,6 +45260,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+var POLL_INTERVAL_MS = 10000;
+
 var TransactionPool =
 /*#__PURE__*/
 function (_Component) {
@@ -45281,7 +45283,7 @@ function (_Component) {
     return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(TransactionPool)).call.apply(_getPrototypeOf2, [this].concat(args))), _this.state = {
       transactionPoolMap: {}
     }, _this.fetchTransactionPoolMap = function () {
-      fetch("http://localhost:3000/api/transaction-pool-map").then(function (response) {
+      fetch("".concat(document.location.origin, "/api/transaction-pool-map")).then(function (response) {
         return response.json();
       }).then(function (json) {
         return _this.setState({
@@ -45294,7 +45296,18 @@ function (_Component) {
   _createClass(TransactionPool, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.fetchTransactionPoolMap();
+      var _this2 = this;
+
+      this.fetchTransactionPoolMap(); // refetch transaction pool data every 10s
+
+      this.fetchPoolMapInterval = setInterval(function () {
+        return _this2.fetchTransactionPoolMap();
+      }, POLL_INTERVAL_MS);
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      clearInterval(this.fetchPoolMapInterval);
     }
   }, {
     key: "render",
@@ -45461,7 +45474,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58262" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57348" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

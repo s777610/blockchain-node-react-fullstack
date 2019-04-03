@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
+import Transaction from "./Transaction";
 
 class Block extends Component {
   state = {
@@ -23,7 +24,14 @@ class Block extends Component {
     if (this.state.displayTransaction) {
       return (
         <div>
-          {JSON.stringify(data)}
+          {data.map(transaction => {
+            return (
+              <div key={transaction.id}>
+                <hr />
+                <Transaction transaction={transaction} />
+              </div>
+            );
+          })}
           <br />
           <Button variant="danger" size="sm" onClick={this.toggleTransaction}>
             Show Less

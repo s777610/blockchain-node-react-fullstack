@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 class ConductTransaction extends Component {
@@ -16,9 +16,22 @@ class ConductTransaction extends Component {
     this.setState({ amount: Number(event.target.value) });
   };
 
-  render() {
-    console.log("this.state", this.state);
+  conductTransaction = () => {
+    const { recipient, amount } = this.state;
 
+    fetch("http://localhost:3000/api/transact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ recipient, amount })
+    })
+      .then(response => response.json())
+      .then(json => {
+        // message would be undefined in case of seccuss, then type is success
+        alert(json.message || json.type);
+      });
+  };
+
+  render() {
     return (
       <div className="ConductTransaction">
         <Link to="/">Home</Link>
@@ -39,6 +52,11 @@ class ConductTransaction extends Component {
             onChange={this.updateAmount}
           />
         </Form.Group>
+        <div>
+          <Button variant="danger" onClick={this.conductTransaction}>
+            Submit
+          </Button>
+        </div>
       </div>
     );
   }

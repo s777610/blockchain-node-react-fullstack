@@ -45165,13 +45165,31 @@ function (_Component) {
       _this.setState({
         amount: Number(event.target.value)
       });
+    }, _this.conductTransaction = function () {
+      var _this$state = _this.state,
+          recipient = _this$state.recipient,
+          amount = _this$state.amount;
+      fetch("http://localhost:3000/api/transact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          recipient: recipient,
+          amount: amount
+        })
+      }).then(function (response) {
+        return response.json();
+      }).then(function (json) {
+        // message would be undefined in case of seccuss, then type is success
+        alert(json.message || json.type);
+      });
     }, _temp));
   }
 
   _createClass(ConductTransaction, [{
     key: "render",
     value: function render() {
-      console.log("this.state", this.state);
       return _react.default.createElement("div", {
         className: "ConductTransaction"
       }, _react.default.createElement(_reactRouterDom.Link, {
@@ -45186,7 +45204,10 @@ function (_Component) {
         placeholder: "amount",
         value: this.state.amount,
         onChange: this.updateAmount
-      })));
+      })), _react.default.createElement("div", null, _react.default.createElement(_reactBootstrap.Button, {
+        variant: "danger",
+        onClick: this.conductTransaction
+      }, "Submit")));
     }
   }]);
 

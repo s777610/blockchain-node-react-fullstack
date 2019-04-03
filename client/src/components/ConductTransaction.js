@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import history from "../history";
 
 class ConductTransaction extends Component {
   state = {
@@ -28,6 +29,7 @@ class ConductTransaction extends Component {
       .then(json => {
         // message would be undefined in case of seccuss, then type is success
         alert(json.message || json.type);
+        history.push("/transaction-pool");
       });
   };
 

@@ -26,6 +26,10 @@ body {
   align-items: center;
 }
 
+.highline {
+  color: rgb(233, 186, 31);
+}
+
 .WalletInfo {
   width: 500px;
 }
@@ -47,6 +51,11 @@ body {
 .ConductTransaction,
 .TransactionPool {
   margin: 10%;
+}
+
+.inputField {
+  width: 400px;
+  margin: 30px auto;
 }
 
 a,

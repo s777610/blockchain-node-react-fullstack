@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Form, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+
 import history from "../../history";
 
 class ConductTransaction extends Component {
@@ -39,6 +39,7 @@ class ConductTransaction extends Component {
         <h3 className="pageTitle">Conduct a Transaction</h3>
         <Form.Group>
           <Form.Control
+            className="inputField"
             input="text"
             placeholder="recipient"
             value={this.state.recipient}
@@ -47,6 +48,7 @@ class ConductTransaction extends Component {
         </Form.Group>
         <Form.Group>
           <Form.Control
+            className="inputField"
             input="number"
             placeholder="amount"
             value={this.state.amount}

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import logo from "../assets/logo.png";
-import { Link } from "react-router-dom";
 
 class Home extends Component {
   state = { walletInfo: {} };
@@ -18,11 +17,18 @@ class Home extends Component {
       <div className="App">
         <img className="logo" src={logo} />
         <br />
-        <div>Welcome to the blockchain...</div>
-
+        <h3>Welcome to the blockchain...</h3>
+        <br />
         <div className="WalletInfo">
-          <div>Address: {address}</div>
-          <div>Balance: {balance}</div>
+          <div>
+            <span className="highline">Address: </span>
+            {address}
+          </div>
+          <br />
+          <div>
+            <span className="highline">Balance: </span>
+            {balance}
+          </div>
         </div>
       </div>
     );

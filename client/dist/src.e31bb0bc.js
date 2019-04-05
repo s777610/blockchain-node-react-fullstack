@@ -29782,8 +29782,6 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _logo = _interopRequireDefault(require("../assets/logo.png"));
 
-var _reactRouterDom = require("react-router-dom");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
@@ -29853,9 +29851,13 @@ function (_Component) {
       }, _react.default.createElement("img", {
         className: "logo",
         src: _logo.default
-      }), _react.default.createElement("br", null), _react.default.createElement("div", null, "Welcome to the blockchain..."), _react.default.createElement("div", {
+      }), _react.default.createElement("br", null), _react.default.createElement("h3", null, "Welcome to the blockchain..."), _react.default.createElement("br", null), _react.default.createElement("div", {
         className: "WalletInfo"
-      }, _react.default.createElement("div", null, "Address: ", address), _react.default.createElement("div", null, "Balance: ", balance)));
+      }, _react.default.createElement("div", null, _react.default.createElement("span", {
+        className: "highline"
+      }, "Address: "), address), _react.default.createElement("br", null), _react.default.createElement("div", null, _react.default.createElement("span", {
+        className: "highline"
+      }, "Balance: "), balance)));
     }
   }]);
 
@@ -29864,7 +29866,7 @@ function (_Component) {
 
 var _default = Home;
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js","../assets/logo.png":"assets/logo.png","react-router-dom":"../../node_modules/react-router-dom/esm/react-router-dom.js"}],"../../node_modules/classnames/index.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","../assets/logo.png":"assets/logo.png"}],"../../node_modules/classnames/index.js":[function(require,module,exports) {
 var define;
 /*!
   Copyright (c) 2017 Jed Watson.
@@ -45112,8 +45114,6 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _reactBootstrap = require("react-bootstrap");
 
-var _reactRouterDom = require("react-router-dom");
-
 var _history = _interopRequireDefault(require("../../history"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -45199,11 +45199,13 @@ function (_Component) {
       }, _react.default.createElement("h3", {
         className: "pageTitle"
       }, "Conduct a Transaction"), _react.default.createElement(_reactBootstrap.Form.Group, null, _react.default.createElement(_reactBootstrap.Form.Control, {
+        className: "inputField",
         input: "text",
         placeholder: "recipient",
         value: this.state.recipient,
         onChange: this.updateRecipient
       })), _react.default.createElement(_reactBootstrap.Form.Group, null, _react.default.createElement(_reactBootstrap.Form.Control, {
+        className: "inputField",
         input: "number",
         placeholder: "amount",
         value: this.state.amount,
@@ -45220,7 +45222,7 @@ function (_Component) {
 
 var _default = ConductTransaction;
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js","react-bootstrap":"../../node_modules/react-bootstrap/es/index.js","react-router-dom":"../../node_modules/react-router-dom/esm/react-router-dom.js","../../history":"history.js"}],"components/transactions/TransactionPool.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","react-bootstrap":"../../node_modules/react-bootstrap/es/index.js","../../history":"history.js"}],"components/transactions/TransactionPool.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

@@ -29770,7 +29770,7 @@ var _default = (0, _history.createBrowserHistory)();
 exports.default = _default;
 },{"history":"../../node_modules/history/esm/history.js"}],"assets/logo.png":[function(require,module,exports) {
 module.exports = "/logo.e9a9c890.png";
-},{}],"components/App.js":[function(require,module,exports) {
+},{}],"components/Home.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29806,30 +29806,30 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var App =
+var Home =
 /*#__PURE__*/
 function (_Component) {
-  _inherits(App, _Component);
+  _inherits(Home, _Component);
 
-  function App() {
+  function Home() {
     var _getPrototypeOf2;
 
     var _this;
 
     var _temp;
 
-    _classCallCheck(this, App);
+    _classCallCheck(this, Home);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(App)).call.apply(_getPrototypeOf2, [this].concat(args))), _this.state = {
+    return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Home)).call.apply(_getPrototypeOf2, [this].concat(args))), _this.state = {
       walletInfo: {}
     }, _temp));
   }
 
-  _createClass(App, [{
+  _createClass(Home, [{
     key: "componentDidMount",
     value: function componentDidMount() {
       var _this2 = this;
@@ -29853,22 +29853,16 @@ function (_Component) {
       }, _react.default.createElement("img", {
         className: "logo",
         src: _logo.default
-      }), _react.default.createElement("br", null), _react.default.createElement("div", null, "Welcome to the blockchain..."), _react.default.createElement("br", null), _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Link, {
-        to: "/blocks"
-      }, "Blocks")), _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Link, {
-        to: "/conduct-transaction"
-      }, "Conduct a Transaction")), _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Link, {
-        to: "/transaction-pool"
-      }, "Transaction Pool")), _react.default.createElement("br", null), _react.default.createElement("div", {
+      }), _react.default.createElement("br", null), _react.default.createElement("div", null, "Welcome to the blockchain..."), _react.default.createElement("div", {
         className: "WalletInfo"
       }, _react.default.createElement("div", null, "Address: ", address), _react.default.createElement("div", null, "Balance: ", balance)));
     }
   }]);
 
-  return App;
+  return Home;
 }(_react.Component);
 
-var _default = App;
+var _default = Home;
 exports.default = _default;
 },{"react":"../../node_modules/react/index.js","../assets/logo.png":"assets/logo.png","react-router-dom":"../../node_modules/react-router-dom/esm/react-router-dom.js"}],"../../node_modules/classnames/index.js":[function(require,module,exports) {
 var define;
@@ -44873,7 +44867,7 @@ var _ToggleButtonGroup2 = _interopRequireDefault(require("./ToggleButtonGroup"))
 var _Tooltip2 = _interopRequireDefault(require("./Tooltip"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./Alert":"../../node_modules/react-bootstrap/es/Alert.js","./Badge":"../../node_modules/react-bootstrap/es/Badge.js","./Breadcrumb":"../../node_modules/react-bootstrap/es/Breadcrumb.js","./BreadcrumbItem":"../../node_modules/react-bootstrap/es/BreadcrumbItem.js","./Button":"../../node_modules/react-bootstrap/es/Button.js","./ButtonGroup":"../../node_modules/react-bootstrap/es/ButtonGroup.js","./ButtonToolbar":"../../node_modules/react-bootstrap/es/ButtonToolbar.js","./Card":"../../node_modules/react-bootstrap/es/Card.js","./CardColumns":"../../node_modules/react-bootstrap/es/CardColumns.js","./CardDeck":"../../node_modules/react-bootstrap/es/CardDeck.js","./CardImg":"../../node_modules/react-bootstrap/es/CardImg.js","./CardGroup":"../../node_modules/react-bootstrap/es/CardGroup.js","./Carousel":"../../node_modules/react-bootstrap/es/Carousel.js","./CarouselItem":"../../node_modules/react-bootstrap/es/CarouselItem.js","./CloseButton":"../../node_modules/react-bootstrap/es/CloseButton.js","./Col":"../../node_modules/react-bootstrap/es/Col.js","./Collapse":"../../node_modules/react-bootstrap/es/Collapse.js","./Dropdown":"../../node_modules/react-bootstrap/es/Dropdown.js","./DropdownButton":"../../node_modules/react-bootstrap/es/DropdownButton.js","./DropdownItem":"../../node_modules/react-bootstrap/es/DropdownItem.js","./Fade":"../../node_modules/react-bootstrap/es/Fade.js","./Form":"../../node_modules/react-bootstrap/es/Form.js","./FormControl":"../../node_modules/react-bootstrap/es/FormControl.js","./FormCheck":"../../node_modules/react-bootstrap/es/FormCheck.js","./FormGroup":"../../node_modules/react-bootstrap/es/FormGroup.js","./FormLabel":"../../node_modules/react-bootstrap/es/FormLabel.js","./FormText":"../../node_modules/react-bootstrap/es/FormText.js","./Container":"../../node_modules/react-bootstrap/es/Container.js","./Image":"../../node_modules/react-bootstrap/es/Image.js","./Figure":"../../node_modules/react-bootstrap/es/Figure.js","./InputGroup":"../../node_modules/react-bootstrap/es/InputGroup.js","./Jumbotron":"../../node_modules/react-bootstrap/es/Jumbotron.js","./ListGroup":"../../node_modules/react-bootstrap/es/ListGroup.js","./ListGroupItem":"../../node_modules/react-bootstrap/es/ListGroupItem.js","./Media":"../../node_modules/react-bootstrap/es/Media.js","./Modal":"../../node_modules/react-bootstrap/es/Modal.js","./ModalBody":"../../node_modules/react-bootstrap/es/ModalBody.js","./ModalDialog":"../../node_modules/react-bootstrap/es/ModalDialog.js","./ModalFooter":"../../node_modules/react-bootstrap/es/ModalFooter.js","./ModalTitle":"../../node_modules/react-bootstrap/es/ModalTitle.js","./Nav":"../../node_modules/react-bootstrap/es/Nav.js","./Navbar":"../../node_modules/react-bootstrap/es/Navbar.js","./NavbarBrand":"../../node_modules/react-bootstrap/es/NavbarBrand.js","./NavDropdown":"../../node_modules/react-bootstrap/es/NavDropdown.js","./NavItem":"../../node_modules/react-bootstrap/es/NavItem.js","./Overlay":"../../node_modules/react-bootstrap/es/Overlay.js","./OverlayTrigger":"../../node_modules/react-bootstrap/es/OverlayTrigger.js","./PageItem":"../../node_modules/react-bootstrap/es/PageItem.js","./Pagination":"../../node_modules/react-bootstrap/es/Pagination.js","./Popover":"../../node_modules/react-bootstrap/es/Popover.js","./ProgressBar":"../../node_modules/react-bootstrap/es/ProgressBar.js","./ResponsiveEmbed":"../../node_modules/react-bootstrap/es/ResponsiveEmbed.js","./Row":"../../node_modules/react-bootstrap/es/Row.js","./SafeAnchor":"../../node_modules/react-bootstrap/es/SafeAnchor.js","./Spinner":"../../node_modules/react-bootstrap/es/Spinner.js","./SplitButton":"../../node_modules/react-bootstrap/es/SplitButton.js","./Tab":"../../node_modules/react-bootstrap/es/Tab.js","./TabContainer":"../../node_modules/react-bootstrap/es/TabContainer.js","./TabContent":"../../node_modules/react-bootstrap/es/TabContent.js","./Table":"../../node_modules/react-bootstrap/es/Table.js","./TabPane":"../../node_modules/react-bootstrap/es/TabPane.js","./Tabs":"../../node_modules/react-bootstrap/es/Tabs.js","./ThemeProvider":"../../node_modules/react-bootstrap/es/ThemeProvider.js","./ToggleButton":"../../node_modules/react-bootstrap/es/ToggleButton.js","./ToggleButtonGroup":"../../node_modules/react-bootstrap/es/ToggleButtonGroup.js","./Tooltip":"../../node_modules/react-bootstrap/es/Tooltip.js"}],"components/Transaction.js":[function(require,module,exports) {
+},{"./Alert":"../../node_modules/react-bootstrap/es/Alert.js","./Badge":"../../node_modules/react-bootstrap/es/Badge.js","./Breadcrumb":"../../node_modules/react-bootstrap/es/Breadcrumb.js","./BreadcrumbItem":"../../node_modules/react-bootstrap/es/BreadcrumbItem.js","./Button":"../../node_modules/react-bootstrap/es/Button.js","./ButtonGroup":"../../node_modules/react-bootstrap/es/ButtonGroup.js","./ButtonToolbar":"../../node_modules/react-bootstrap/es/ButtonToolbar.js","./Card":"../../node_modules/react-bootstrap/es/Card.js","./CardColumns":"../../node_modules/react-bootstrap/es/CardColumns.js","./CardDeck":"../../node_modules/react-bootstrap/es/CardDeck.js","./CardImg":"../../node_modules/react-bootstrap/es/CardImg.js","./CardGroup":"../../node_modules/react-bootstrap/es/CardGroup.js","./Carousel":"../../node_modules/react-bootstrap/es/Carousel.js","./CarouselItem":"../../node_modules/react-bootstrap/es/CarouselItem.js","./CloseButton":"../../node_modules/react-bootstrap/es/CloseButton.js","./Col":"../../node_modules/react-bootstrap/es/Col.js","./Collapse":"../../node_modules/react-bootstrap/es/Collapse.js","./Dropdown":"../../node_modules/react-bootstrap/es/Dropdown.js","./DropdownButton":"../../node_modules/react-bootstrap/es/DropdownButton.js","./DropdownItem":"../../node_modules/react-bootstrap/es/DropdownItem.js","./Fade":"../../node_modules/react-bootstrap/es/Fade.js","./Form":"../../node_modules/react-bootstrap/es/Form.js","./FormControl":"../../node_modules/react-bootstrap/es/FormControl.js","./FormCheck":"../../node_modules/react-bootstrap/es/FormCheck.js","./FormGroup":"../../node_modules/react-bootstrap/es/FormGroup.js","./FormLabel":"../../node_modules/react-bootstrap/es/FormLabel.js","./FormText":"../../node_modules/react-bootstrap/es/FormText.js","./Container":"../../node_modules/react-bootstrap/es/Container.js","./Image":"../../node_modules/react-bootstrap/es/Image.js","./Figure":"../../node_modules/react-bootstrap/es/Figure.js","./InputGroup":"../../node_modules/react-bootstrap/es/InputGroup.js","./Jumbotron":"../../node_modules/react-bootstrap/es/Jumbotron.js","./ListGroup":"../../node_modules/react-bootstrap/es/ListGroup.js","./ListGroupItem":"../../node_modules/react-bootstrap/es/ListGroupItem.js","./Media":"../../node_modules/react-bootstrap/es/Media.js","./Modal":"../../node_modules/react-bootstrap/es/Modal.js","./ModalBody":"../../node_modules/react-bootstrap/es/ModalBody.js","./ModalDialog":"../../node_modules/react-bootstrap/es/ModalDialog.js","./ModalFooter":"../../node_modules/react-bootstrap/es/ModalFooter.js","./ModalTitle":"../../node_modules/react-bootstrap/es/ModalTitle.js","./Nav":"../../node_modules/react-bootstrap/es/Nav.js","./Navbar":"../../node_modules/react-bootstrap/es/Navbar.js","./NavbarBrand":"../../node_modules/react-bootstrap/es/NavbarBrand.js","./NavDropdown":"../../node_modules/react-bootstrap/es/NavDropdown.js","./NavItem":"../../node_modules/react-bootstrap/es/NavItem.js","./Overlay":"../../node_modules/react-bootstrap/es/Overlay.js","./OverlayTrigger":"../../node_modules/react-bootstrap/es/OverlayTrigger.js","./PageItem":"../../node_modules/react-bootstrap/es/PageItem.js","./Pagination":"../../node_modules/react-bootstrap/es/Pagination.js","./Popover":"../../node_modules/react-bootstrap/es/Popover.js","./ProgressBar":"../../node_modules/react-bootstrap/es/ProgressBar.js","./ResponsiveEmbed":"../../node_modules/react-bootstrap/es/ResponsiveEmbed.js","./Row":"../../node_modules/react-bootstrap/es/Row.js","./SafeAnchor":"../../node_modules/react-bootstrap/es/SafeAnchor.js","./Spinner":"../../node_modules/react-bootstrap/es/Spinner.js","./SplitButton":"../../node_modules/react-bootstrap/es/SplitButton.js","./Tab":"../../node_modules/react-bootstrap/es/Tab.js","./TabContainer":"../../node_modules/react-bootstrap/es/TabContainer.js","./TabContent":"../../node_modules/react-bootstrap/es/TabContent.js","./Table":"../../node_modules/react-bootstrap/es/Table.js","./TabPane":"../../node_modules/react-bootstrap/es/TabPane.js","./Tabs":"../../node_modules/react-bootstrap/es/Tabs.js","./ThemeProvider":"../../node_modules/react-bootstrap/es/ThemeProvider.js","./ToggleButton":"../../node_modules/react-bootstrap/es/ToggleButton.js","./ToggleButtonGroup":"../../node_modules/react-bootstrap/es/ToggleButtonGroup.js","./Tooltip":"../../node_modules/react-bootstrap/es/Tooltip.js"}],"components/transactions/Transaction.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -44901,7 +44895,7 @@ var Transaction = function Transaction(props) {
 
 var _default = Transaction;
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js"}],"components/Block.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js"}],"components/blocks/Block.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -44913,7 +44907,7 @@ var _react = _interopRequireWildcard(require("react"));
 
 var _reactBootstrap = require("react-bootstrap");
 
-var _Transaction = _interopRequireDefault(require("./Transaction"));
+var _Transaction = _interopRequireDefault(require("../transactions/Transaction"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45010,7 +45004,7 @@ function (_Component) {
 
 var _default = Block;
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js","react-bootstrap":"../../node_modules/react-bootstrap/es/index.js","./Transaction":"components/Transaction.js"}],"components/Blocks.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","react-bootstrap":"../../node_modules/react-bootstrap/es/index.js","../transactions/Transaction":"components/transactions/Transaction.js"}],"components/blocks/Blocks.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -45085,9 +45079,11 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", null, _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Link, {
-        to: "/"
-      }, "Home")), _react.default.createElement("h3", null, "Blocks"), this.state.blocks.map(function (block) {
+      return _react.default.createElement("div", {
+        className: "Blocks"
+      }, _react.default.createElement("h3", {
+        className: "pageTitle"
+      }, "Blocks"), this.state.blocks.map(function (block) {
         return _react.default.createElement("div", {
           key: block.hash,
           className: "Block"
@@ -45104,7 +45100,7 @@ function (_Component) {
 
 var _default = Blocks;
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js","react-router-dom":"../../node_modules/react-router-dom/esm/react-router-dom.js","./Block":"components/Block.js"}],"components/ConductTransaction.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","react-router-dom":"../../node_modules/react-router-dom/esm/react-router-dom.js","./Block":"components/blocks/Block.js"}],"components/transactions/ConductTransaction.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -45118,7 +45114,7 @@ var _reactBootstrap = require("react-bootstrap");
 
 var _reactRouterDom = require("react-router-dom");
 
-var _history = _interopRequireDefault(require("../history"));
+var _history = _interopRequireDefault(require("../../history"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45200,9 +45196,9 @@ function (_Component) {
     value: function render() {
       return _react.default.createElement("div", {
         className: "ConductTransaction"
-      }, _react.default.createElement(_reactRouterDom.Link, {
-        to: "/"
-      }, "Home"), _react.default.createElement("h3", null, "Conduct a Transaction"), _react.default.createElement(_reactBootstrap.Form.Group, null, _react.default.createElement(_reactBootstrap.Form.Control, {
+      }, _react.default.createElement("h3", {
+        className: "pageTitle"
+      }, "Conduct a Transaction"), _react.default.createElement(_reactBootstrap.Form.Group, null, _react.default.createElement(_reactBootstrap.Form.Control, {
         input: "text",
         placeholder: "recipient",
         value: this.state.recipient,
@@ -45224,7 +45220,7 @@ function (_Component) {
 
 var _default = ConductTransaction;
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js","react-bootstrap":"../../node_modules/react-bootstrap/es/index.js","react-router-dom":"../../node_modules/react-router-dom/esm/react-router-dom.js","../history":"history.js"}],"components/TransactionPool.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","react-bootstrap":"../../node_modules/react-bootstrap/es/index.js","react-router-dom":"../../node_modules/react-router-dom/esm/react-router-dom.js","../../history":"history.js"}],"components/transactions/TransactionPool.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -45240,7 +45236,7 @@ var _Transaction = _interopRequireDefault(require("./Transaction"));
 
 var _reactRouterDom = require("react-router-dom");
 
-var _history = _interopRequireDefault(require("../history"));
+var _history = _interopRequireDefault(require("../../history"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -45328,9 +45324,9 @@ function (_Component) {
     value: function render() {
       return _react.default.createElement("div", {
         className: "TransactionPool"
-      }, _react.default.createElement("div", null, _react.default.createElement(_reactRouterDom.Link, {
-        to: "/"
-      }, "Home"), _react.default.createElement("h3", null, "Transaction Pool"), Object.values(this.state.transactionPoolMap).map(function (transaction) {
+      }, _react.default.createElement("div", null, _react.default.createElement("h3", {
+        className: "pageTitle"
+      }, "Transaction Pool"), Object.values(this.state.transactionPoolMap).map(function (transaction) {
         return _react.default.createElement("div", {
           key: transaction.id
         }, _react.default.createElement("hr", {
@@ -45356,7 +45352,138 @@ function (_Component) {
 
 var _default = TransactionPool;
 exports.default = _default;
-},{"react":"../../node_modules/react/index.js","react-bootstrap":"../../node_modules/react-bootstrap/es/index.js","./Transaction":"components/Transaction.js","react-router-dom":"../../node_modules/react-router-dom/esm/react-router-dom.js","../history":"history.js"}],"../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","react-bootstrap":"../../node_modules/react-bootstrap/es/index.js","./Transaction":"components/transactions/Transaction.js","react-router-dom":"../../node_modules/react-router-dom/esm/react-router-dom.js","../../history":"history.js"}],"components/layout/Navbar.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactBootstrap = require("react-bootstrap");
+
+var _reactRouterDom = require("react-router-dom");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var AppNavbar = function AppNavbar() {
+  return _react.default.createElement(_reactBootstrap.Navbar, {
+    fixed: "top",
+    collapseOnSelect: true,
+    expand: "lg",
+    bg: "dark",
+    variant: "dark"
+  }, _react.default.createElement(_reactBootstrap.Navbar.Brand, null, _react.default.createElement(_reactRouterDom.Link, {
+    to: "/"
+  }, "HalfHalfCoin 2.0")), _react.default.createElement(_reactBootstrap.Navbar.Toggle, {
+    "aria-controls": "responsive-navbar-nav"
+  }), _react.default.createElement(_reactBootstrap.Navbar.Collapse, {
+    id: "responsive-navbar-nav"
+  }, _react.default.createElement(_reactBootstrap.Nav, {
+    className: "mr-auto"
+  }, _react.default.createElement(_reactBootstrap.Nav.Link, null, _react.default.createElement(_reactRouterDom.Link, {
+    to: "/blocks"
+  }, "Blocks")), _react.default.createElement(_reactBootstrap.Nav.Link, null, _react.default.createElement(_reactRouterDom.Link, {
+    to: "/transaction-pool"
+  }, "Transaction-Pool"))), _react.default.createElement(_reactBootstrap.Nav, null, _react.default.createElement(_reactBootstrap.Nav.Link, null, _react.default.createElement(_reactRouterDom.Link, {
+    to: "/conduct-transaction"
+  }, "Conduct-Transaction")), _react.default.createElement(_reactBootstrap.Nav.Link, {
+    eventKey: 2,
+    href: "https://weichenghung.com/",
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, "MySite"))));
+};
+
+var _default = AppNavbar;
+exports.default = _default;
+},{"react":"../../node_modules/react/index.js","react-bootstrap":"../../node_modules/react-bootstrap/es/index.js","react-router-dom":"../../node_modules/react-router-dom/esm/react-router-dom.js"}],"App.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _reactRouterDom = require("react-router-dom");
+
+var _history = _interopRequireDefault(require("./history"));
+
+var _Home = _interopRequireDefault(require("./components/Home"));
+
+var _Blocks = _interopRequireDefault(require("./components/blocks/Blocks"));
+
+var _ConductTransaction = _interopRequireDefault(require("./components/transactions/ConductTransaction"));
+
+var _TransactionPool = _interopRequireDefault(require("./components/transactions/TransactionPool"));
+
+var _Navbar = _interopRequireDefault(require("./components/layout/Navbar"));
+
+var _react = _interopRequireWildcard(require("react"));
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var App =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(App, _Component);
+
+  function App() {
+    _classCallCheck(this, App);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(App).apply(this, arguments));
+  }
+
+  _createClass(App, [{
+    key: "render",
+    value: function render() {
+      return _react.default.createElement(_reactRouterDom.Router, {
+        history: _history.default
+      }, _react.default.createElement(_Navbar.default, null), _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
+        exact: true,
+        path: "/",
+        component: _Home.default
+      }), _react.default.createElement(_reactRouterDom.Route, {
+        path: "/blocks",
+        component: _Blocks.default
+      }), _react.default.createElement(_reactRouterDom.Route, {
+        path: "/conduct-transaction",
+        component: _ConductTransaction.default
+      }), _react.default.createElement(_reactRouterDom.Route, {
+        path: "/transaction-pool",
+        component: _TransactionPool.default
+      })));
+    }
+  }]);
+
+  return App;
+}(_react.Component);
+
+var _default = App;
+exports.default = _default;
+},{"react-router-dom":"../../node_modules/react-router-dom/esm/react-router-dom.js","./history":"history.js","./components/Home":"components/Home.js","./components/blocks/Blocks":"components/blocks/Blocks.js","./components/transactions/ConductTransaction":"components/transactions/ConductTransaction.js","./components/transactions/TransactionPool":"components/transactions/TransactionPool.js","./components/layout/Navbar":"components/layout/Navbar.js","react":"../../node_modules/react/index.js"}],"../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -45435,39 +45562,14 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = require("react-dom");
 
-var _reactRouterDom = require("react-router-dom");
-
-var _history = _interopRequireDefault(require("./history"));
-
-var _App = _interopRequireDefault(require("./components/App"));
-
-var _Blocks = _interopRequireDefault(require("./components/Blocks"));
-
-var _ConductTransaction = _interopRequireDefault(require("./components/ConductTransaction"));
-
-var _TransactionPool = _interopRequireDefault(require("./components/TransactionPool"));
+var _App = _interopRequireDefault(require("./App"));
 
 require("./index.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(0, _reactDom.render)(_react.default.createElement(_reactRouterDom.Router, {
-  history: _history.default
-}, _react.default.createElement(_reactRouterDom.Switch, null, _react.default.createElement(_reactRouterDom.Route, {
-  exact: true,
-  path: "/",
-  component: _App.default
-}), _react.default.createElement(_reactRouterDom.Route, {
-  path: "/blocks",
-  component: _Blocks.default
-}), _react.default.createElement(_reactRouterDom.Route, {
-  path: "/conduct-transaction",
-  component: _ConductTransaction.default
-}), _react.default.createElement(_reactRouterDom.Route, {
-  path: "/transaction-pool",
-  component: _TransactionPool.default
-}))), document.getElementById("root"));
-},{"react":"../../node_modules/react/index.js","react-dom":"../../node_modules/react-dom/index.js","react-router-dom":"../../node_modules/react-router-dom/esm/react-router-dom.js","./history":"history.js","./components/App":"components/App.js","./components/Blocks":"components/Blocks.js","./components/ConductTransaction":"components/ConductTransaction.js","./components/TransactionPool":"components/TransactionPool.js","./index.css":"index.css"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+(0, _reactDom.render)(_react.default.createElement(_App.default, null), document.getElementById("root"));
+},{"react":"../../node_modules/react/index.js","react-dom":"../../node_modules/react-dom/index.js","./App":"App.js","./index.css":"index.css"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -45495,7 +45597,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63235" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50263" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import logo from "../assets/logo.png";
 import { Link } from "react-router-dom";
 
-class App extends Component {
+class Home extends Component {
   state = { walletInfo: {} };
 
   componentDidMount() {
@@ -19,17 +19,7 @@ class App extends Component {
         <img className="logo" src={logo} />
         <br />
         <div>Welcome to the blockchain...</div>
-        <br />
-        <div>
-          <Link to="/blocks">Blocks</Link>
-        </div>
-        <div>
-          <Link to="/conduct-transaction">Conduct a Transaction</Link>
-        </div>
-        <div>
-          <Link to="/transaction-pool">Transaction Pool</Link>
-        </div>
-        <br />
+
         <div className="WalletInfo">
           <div>Address: {address}</div>
           <div>Balance: {balance}</div>
@@ -39,4 +29,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Home;

@@ -9,8 +9,15 @@ body {
 }
 
 .logo {
-  width: 250px;
-  height: 250px;
+  margin-top: 30px;
+  padding: 30px;
+  width: 230px;
+  height: 230px;
+}
+
+.pageTitle {
+  font-size: 200%;
+  margin: 50px 0;
 }
 
 .App {
@@ -21,6 +28,10 @@ body {
 
 .WalletInfo {
   width: 500px;
+}
+
+.Blocks {
+  margin-top: 60px;
 }
 
 .Block {
@@ -41,5 +52,4 @@ body {
 a,
 a:hover {
   color: #e66;
-  text-decoration: underline;
 }

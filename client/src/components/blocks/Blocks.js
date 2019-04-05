@@ -13,11 +13,8 @@ class Blocks extends Component {
 
   render() {
     return (
-      <div>
-        <div>
-          <Link to="/">Home</Link>
-        </div>
-        <h3>Blocks</h3>
+      <div className="Blocks">
+        <h3 className="pageTitle">Blocks</h3>
         {this.state.blocks.map(block => {
           return (
             <div key={block.hash} className="Block">

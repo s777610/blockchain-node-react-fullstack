@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import history from "../history";
+import history from "../../history";
 
 class ConductTransaction extends Component {
   state = {
@@ -36,8 +36,7 @@ class ConductTransaction extends Component {
   render() {
     return (
       <div className="ConductTransaction">
-        <Link to="/">Home</Link>
-        <h3>Conduct a Transaction</h3>
+        <h3 className="pageTitle">Conduct a Transaction</h3>
         <Form.Group>
           <Form.Control
             input="text"

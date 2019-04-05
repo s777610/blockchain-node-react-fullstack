@@ -44917,6 +44917,8 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -44967,9 +44969,9 @@ function (_Component) {
           timestamp = _this$props$block.timestamp,
           hash = _this$props$block.hash;
       var hashDisplay = "".concat(hash.substring(0, 15), "...");
-      return _react.default.createElement("div", {
-        className: "Block"
-      }, _react.default.createElement("div", null, "Hash: ", hashDisplay), _react.default.createElement("div", null, "Timestamp: ", new Date(timestamp).toLocaleString()), this.displayTransaction);
+      return _react.default.createElement("div", _defineProperty({
+        className: true
+      }, "className", "Block"), _react.default.createElement("div", null, "Hash: ", hashDisplay), _react.default.createElement("div", null, "Timestamp: ", new Date(timestamp).toLocaleString()), this.displayTransaction);
     }
   }, {
     key: "displayTransaction",
@@ -45087,8 +45089,7 @@ function (_Component) {
         className: "pageTitle"
       }, "Blocks"), this.state.blocks.map(function (block) {
         return _react.default.createElement("div", {
-          key: block.hash,
-          className: "Block"
+          key: block.hash
         }, _react.default.createElement(_Block.default, {
           key: block.hash,
           block: block
@@ -45158,7 +45159,8 @@ function (_Component) {
 
     return _possibleConstructorReturn(_this, (_temp = _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(ConductTransaction)).call.apply(_getPrototypeOf2, [this].concat(args))), _this.state = {
       recipient: "",
-      amount: 0
+      amount: 0,
+      knownAddresses: []
     }, _this.updateRecipient = function (event) {
       _this.setState({
         recipient: event.target.value
@@ -45192,13 +45194,32 @@ function (_Component) {
   }
 
   _createClass(ConductTransaction, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      fetch("".concat(document.location.origin, "/api/known-addresses")).then(function (response) {
+        return response.json();
+      }).then(function (json) {
+        return _this2.setState({
+          knownAddresses: json
+        });
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       return _react.default.createElement("div", {
         className: "ConductTransaction"
       }, _react.default.createElement("h3", {
         className: "pageTitle"
-      }, "Conduct a Transaction"), _react.default.createElement(_reactBootstrap.Form.Group, null, _react.default.createElement(_reactBootstrap.Form.Control, {
+      }, "Conduct a Transaction"), _react.default.createElement("br", null), _react.default.createElement("h4", {
+        className: "highline"
+      }, "Known Addresses"), this.state.knownAddresses.map(function (knownAddress) {
+        return _react.default.createElement("div", {
+          key: knownAddress
+        }, _react.default.createElement("div", null, knownAddress), _react.default.createElement("br", null));
+      }), _react.default.createElement("br", null), _react.default.createElement(_reactBootstrap.Form.Group, null, _react.default.createElement(_reactBootstrap.Form.Control, {
         className: "inputField",
         input: "text",
         placeholder: "recipient",
@@ -45599,7 +45620,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50263" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60469" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -34,99 +34,15 @@ setTimeout(() => pubsub.broadcastChain(), 1500);
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "client/dist")));
 
-app.get("/api/blocks", (req, res) => {
-  res.json(blockchain.chain);
-});
-
-app.get("/api/blocks/length", (req, res) => {
-  res.json(blockchain.chain.length);
-});
-
-app.get("/api/blocks/:id", (req, res) => {
-  const { id } = req.params;
-  const { length } = blockchain.chain;
-
-  // slice make a copy of array
-  const blocksReversed = blockchain.chain.slice().reverse();
-
-  let startIndex = (id - 1) * 5;
-  let endIndex = id * 5;
-
-  startIndex = startIndex < length ? startIndex : length;
-  endIndex = endIndex < length ? endIndex : length;
-
-  res.json(blocksReversed.slice(startIndex, endIndex));
-});
-
-app.post("/api/mine", (req, res) => {
-  const { data } = req.body;
-  blockchain.addBlock({ data });
-  pubsub.broadcastChain();
-  res.redirect("/api/blocks");
-});
-
-app.post("/api/transact", (req, res) => {
-  const { amount, recipient } = req.body;
-  // check if transaction inside transactionPool
-  let transaction = transactionPool.existingTransaction({
-    inputAddress: wallet.publicKey
-  });
-
-  try {
-    if (transaction) {
-      transaction.update({ senderWallet: wallet, recipient, amount });
-    } else {
-      transaction = wallet.createTransaction({
-        recipient,
-        amount,
-        chain: blockchain.chain
-      });
-    }
-  } catch (error) {
-    return res.status(400).json({ type: "error", message: error.message });
-  }
-
-  transactionPool.setTransaction(transaction);
-
-  pubsub.broadcastTransaction(transaction);
-
-  res.json({ type: "success", transaction });
-});
-
-app.get("/api/transaction-pool-map", (req, res) => {
-  res.json(transactionPool.transactionMap);
-});
-
-app.get("/api/mine-transactions", (req, res) => {
-  transactionMiner.mineTransactions();
-
-  res.redirect("/api/blocks");
-});
-
-app.get("/api/wallet-info", (req, res) => {
-  const address = wallet.publicKey;
-  res.json({
-    address,
-    balance: Wallet.calculateBalance({
-      chain: blockchain.chain,
-      address
-    })
-  });
-});
-
-app.get("/api/known-addresses", (req, res) => {
-  const addressMap = {};
-
-  for (let block of blockchain.chain) {
-    for (let transaction of block.data) {
-      const recipients = Object.keys(transaction.outputMap);
-
-      recipients.forEach(recipient => (addressMap[recipient] = recipient));
-    }
-  }
-
-  res.json(Object.keys(addressMap));
-});
+require("./routes/blockchain")(app, blockchain, pubsub);
+require("./routes/wallet")(
+  app,
+  blockchain,
+  transactionPool,
+  wallet,
+  transactionMiner,
+  pubsub
+);
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client/dist/index.html"));

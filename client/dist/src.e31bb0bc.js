@@ -29812,9 +29812,7 @@ function (_Component) {
   function Home() {
     var _getPrototypeOf2;
 
-    var _this;
-
-    var _temp;
+    var _temp, _this;
 
     _classCallCheck(this, Home);
 
@@ -44943,9 +44941,7 @@ function (_Component) {
   function Block() {
     var _getPrototypeOf2;
 
-    var _this;
-
-    var _temp;
+    var _temp, _this;
 
     _classCallCheck(this, Block);
 
@@ -45060,9 +45056,7 @@ function (_Component) {
   function Blocks() {
     var _getPrototypeOf2;
 
-    var _this;
-
-    var _temp;
+    var _temp, _this;
 
     _classCallCheck(this, Blocks);
 
@@ -45179,9 +45173,7 @@ function (_Component) {
   function ConductTransaction() {
     var _getPrototypeOf2;
 
-    var _this;
-
-    var _temp;
+    var _temp, _this;
 
     _classCallCheck(this, ConductTransaction);
 
@@ -45325,9 +45317,7 @@ function (_Component) {
   function TransactionPool() {
     var _getPrototypeOf2;
 
-    var _this;
-
-    var _temp;
+    var _temp, _this;
 
     _classCallCheck(this, TransactionPool);
 
@@ -45652,7 +45642,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54816" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57344" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

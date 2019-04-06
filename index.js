@@ -3,10 +3,10 @@ const request = require("request");
 const path = require("path");
 
 const bodyParser = require("body-parser");
-const Blockchain = require("./blockchain");
+const Blockchain = require("./models/blockchain");
 const PubSub = require("./app/pubsub");
-const TransactionPool = require("./wallet/transaction-pool");
-const Wallet = require("./wallet");
+const TransactionPool = require("./models/wallet/transaction-pool");
+const Wallet = require("./models/wallet");
 const TransactionMiner = require("./app/transaction-miner");
 
 const isDevelopment = process.env.ENV === "development";

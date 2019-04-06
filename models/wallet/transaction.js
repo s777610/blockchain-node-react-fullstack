@@ -1,6 +1,6 @@
 const uuid = require("uuid/v1");
-const { verifySignature } = require("../util");
-const { REWARD_INPUT, MINING_REWARD } = require("../config");
+const { verifySignature } = require("../../util");
+const { REWARD_INPUT, MINING_REWARD } = require("../../config");
 
 // Transaction has two properties:
 // Input:

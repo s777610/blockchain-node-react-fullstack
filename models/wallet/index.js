@@ -1,5 +1,5 @@
-const { STARTING_BALANCE } = require("../config");
-const { ec, cryptoHash } = require("../util");
+const { STARTING_BALANCE } = require("../../config");
+const { ec, cryptoHash } = require("../../util");
 const Transaction = require("./transaction");
 
 // Private Key: can be used to sign a signature

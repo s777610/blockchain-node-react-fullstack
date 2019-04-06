@@ -17,6 +17,7 @@ npm install
 ```
 npm run dev
 ```
+Go to http://localhost:3000/
 
 ### Run the test suite
 ```
@@ -25,6 +26,22 @@ npm run test
 
 <br>
 <br>
+
+## Home Page
+<img width="995" alt="Screen Shot 2019-04-06 at 12 24 46 AM" src="https://user-images.githubusercontent.com/35472776/55666357-a6047680-5802-11e9-9fc5-2f72c1c72ad5.png">
+
+<br>
+<br>
+
+## Blockchain Page
+<img width="990" alt="Screen Shot 2019-04-06 at 12 24 57 AM" src="https://user-images.githubusercontent.com/35472776/55666359-a866d080-5802-11e9-817a-c350da8be571.png">
+
+
+<br>
+<br>
+
+## Conduct Transactions Page
+<img width="981" alt="Screen Shot 2019-04-06 at 12 25 14 AM" src="https://user-images.githubusercontent.com/35472776/55666360-aac92a80-5802-11e9-9b3a-2bb76aa9cbd5.png">
 
 
 

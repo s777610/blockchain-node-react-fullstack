@@ -22,6 +22,8 @@ This full-stack application is about cryptocurrency. The back-end was built by N
 ## Proof of Work (Mining)
 The meaning of "Proof of work" is that users have to contribute the entire system by providing their computing power to find the solve the puzzle in order to help the system to record data securely. After that, users would receive the money in return.
 
+<hr>
+<hr>
 
 ## Sharing Resources: 
 ### Pub/Sub Pattern:
@@ -30,6 +32,8 @@ Using Redis pub/sub to power the peer to peer network in this blockchain applica
 ### Broadcast: 
 When one blockchain adds a new block, we want that blockchain to publish the new version of the chain to the entire network. By doing so, all subscribed blockchain instances of application will get that new block data. After that, they can check if the new chain is valid or not and update their own chain or not. It Synchronizes chains when new peers connected to the network as well. In addition, it Optimizes the implementation to avoid redundant interaction.
 
+<hr>
+<hr>
 
 ## Security:
 ### Chain Validation:
@@ -42,7 +46,8 @@ Every node in the system has a wallet. The wallet has a pair of keys, public key
 ### Balance Calculation
 Each node in the system has a wallet with its balance. The balance can be calculated by looking at the history of transactions in the blockchain. In short, the balance of the wallet is the output of their most recent transaction plus all the currency sent to them through all subsequent transactions after that.
 
-
+<hr>
+<hr>
 
 
 ## Architecture
